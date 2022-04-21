@@ -1,0 +1,15 @@
+@use "@app/newstyles/common/component/page.scss" as page;
+
+.page-user-confirm-registration {
+    &__header {
+        @include page.page-header();    
+    }
+    
+    &__form {
+        @include page.page-form();
+    }
+
+    &__error {
+        @include page.page-text-hero();
+    }
+}

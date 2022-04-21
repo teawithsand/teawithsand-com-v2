@@ -1,0 +1,6 @@
+/.env
+/.env.prod
+/__dist
+/__exported
+/webpage
+/__tmp

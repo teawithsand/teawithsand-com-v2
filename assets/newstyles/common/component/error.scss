@@ -1,0 +1,23 @@
+@use "~bootstrap/scss/bootstrap" as bs;
+
+$margin: 10%;
+
+.app-error {
+    @extend .alert;
+    @extend .alert-danger;
+
+    margin-top: map-get($spacers, 3);
+    margin-bottom: map-get($spacers, 3);
+
+    margin-left: $margin;
+    margin-right: $margin;
+
+    width: calc(100% - $margin*2);
+
+    @include bs.media-breakpoint-down(sm) {
+        margin-left: map-get(bs.$spacers, 2);
+        margin-right: map-get(bs.$spacers, 2);
+    }
+
+    text-align: center;
+}

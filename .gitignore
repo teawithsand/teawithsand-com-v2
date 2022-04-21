@@ -1,0 +1,7 @@
+/old_assets
+/node_modules
+/dist
+/old
+/.vscode
+*.scss.d.ts
+/__*

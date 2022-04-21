@@ -1,0 +1,35 @@
+@use "~bootstrap/scss/bootstrap" as bs;
+
+@mixin page-header {
+    padding-top: map-get(bs.$spacers, 5);
+    text-align: center;
+}
+
+$min-page-width: 200px;
+
+$lr-padding: calc(max(100% - min($min-page-width, 25%), 0));
+
+@mixin page-form {
+    padding-left: map-get(bs.$spacers, 2);
+    padding-right: map-get(bs.$spacers, 2);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 50%;
+
+    @include bs.media-breakpoint-down(lg) {
+        width: 75%;
+    }
+
+    @include bs.media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+
+@mixin page-text-hero {
+    padding-top: map-get(bs.$spacers, 32);
+    padding-bottom: map-get(bs.$spacers, 3);
+
+    text-align: center;
+}

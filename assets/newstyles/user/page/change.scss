@@ -1,0 +1,21 @@
+@use "@app/newstyles/common/component/page.scss" as page;
+
+.page-user-change-password {
+    &__header {
+        @include page.page-header();    
+    }
+    
+    &__form {
+        @include page.page-form();
+    }
+}
+
+.page-user-change-email {
+    &__header {
+        @include page.page-header();    
+    }
+    
+    &__form {
+        @include page.page-form();
+    }
+}

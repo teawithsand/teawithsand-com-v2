@@ -1,0 +1,15 @@
+@use "@app/newstyles/common/component/page.scss" as page;
+
+.page-langka-word-set-create {
+    &__header {
+        @include page.page-header();    
+    }
+    
+    &__form {
+        @include page.page-form();
+    }
+}
+
+.page-langka-word-set-edit {
+    @extend .page-langka-word-set-create;
+}

@@ -1,0 +1,142 @@
+@use "~bootstrap/scss/bootstrap" as bs;
+
+.form-valid {
+    .any-form__input.any-form__input--touched:not(.any-form__input--error)  input {
+        @extend .is-valid;
+        display: block;
+    }
+}
+
+.any-form {
+    $this: &;
+
+    &__input {
+        margin-bottom: map-get(bs.$spacers, 3);
+        margin-top: map-get(bs.$spacers, 3);
+
+        &-group {
+            @extend .input-group;
+
+            > input {
+                @extend .form-control;
+            }    
+
+            > textarea {
+                @extend .form-control; 
+            }
+        }
+
+        > label {
+            @extend .form-label;
+        }
+    }
+ 
+    &__validation-error {
+        @extend .invalid-feedback;
+        margin-left: map-get(bs.$spacers, 2);
+        display: none;
+    }
+
+    &__top-error {
+        @extend .alert;
+        @extend .alert-danger;
+    }
+
+    &__submit {
+        button[type="submit"] {
+            @extend .btn;
+            @extend .btn-primary;
+
+            @include bs.media-breakpoint-down(md) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__words-input {
+        > * {
+            margin-top: map-get(bs.$spacers, 3);
+            margin-bottom: map-get(bs.$spacers, 3);
+        }
+
+        &__panel {
+        }
+
+        &__words {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            gap: map-get(bs.$spacers, 1);
+        }
+
+        &__word {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+
+            gap: map-get(bs.$spacers, 2);
+
+            > * {
+                flex: 1 1;
+            }
+        }
+
+        &__word-input {
+            > .any-form__input {
+                @extend .input-group;
+
+                margin-top: 0;
+                margin-bottom: 0;
+            } 
+        }
+
+        &__badge {
+            @extend .input-group-text;
+        }
+
+        &__word-delete {
+            @extend .btn;
+            @extend .btn-danger;
+            flex: 0 1;
+        }
+
+        &__word-add {
+            @extend .btn;
+            @extend .btn-success;
+        }
+    }
+}
+
+.any-form__input--touched.any-form__input--error .any-form__validation-error {
+    display: block;
+}
+
+.any-form__input--touched.any-form__input--error input {
+    @extend .is-invalid;
+}
+
+// end of any form //
+
+.user-login-form {
+    @extend .any-form;
+}
+
+.user-register-form {
+    @extend .any-form;
+    @extend .form-valid;
+}
+
+.user-confirm-registration-form {
+    @extend .any-form;
+    @extend .form-valid;
+}
+
+.langka-word-set-create-edit-form {
+    @extend .any-form;
+    @extend .form-valid;
+}
+
+.langka-word-set-search-form {
+    @extend .any-form;
+}

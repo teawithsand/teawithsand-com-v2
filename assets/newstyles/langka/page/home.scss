@@ -1,0 +1,38 @@
+@import "@app/newstyles/common/component/card.scss";
+
+.page-langka-home {
+    display: flex;
+    flex-direction: column;
+
+    row-gap: map-get($spacers, 5);
+
+    &__header {
+        padding-top: map-get($spacers, 5);
+        text-align: center;
+    }
+
+    &__features {
+        @include card-container();
+        text-align: center;
+
+        &__feature {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            @include card();
+
+            > .feature__btn {
+                margin-top: auto;
+                
+                @extend .btn;
+                @extend .btn-primary;
+                width: 100%;
+            }
+        }
+    }
+
+    &__about {
+        text-align: center;
+    }
+}

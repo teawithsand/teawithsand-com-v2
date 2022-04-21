@@ -1,0 +1,76 @@
+@use "~bootstrap/scss/bootstrap" as bs;
+@use "@app/newstyles/common/component/card.scss" as card;
+
+$odd-color: rgba(0, 0, 0, 0.1);
+
+.user-profile {
+    @include card.heroes-container();
+
+    &__header {
+        text-align: center;
+    }
+
+    &__properties {
+        @include card.small-lax-card-container();
+
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+
+        > * {
+            flex: 0 1;
+            padding: map-get(bs.$spacers, 2);
+
+            border-left: 1px solid $odd-color;
+            border-right: 1px solid $odd-color;
+        }
+
+        > *:nth-child(odd) {
+            background-color: $odd-color;
+        }
+
+        > *:last-child:not(:nth-child(odd)) {
+            border-bottom: 1px solid $odd-color;
+        }
+    }
+
+    &__actions {
+        @include card.small-lax-card-container();
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        // justify-content: center;
+
+        gap: map-get(bs.$spacers, 2);
+
+        > * {
+            // flex: 1 1 1;
+        }
+    }
+
+    &__delete-btn {
+        @extend .btn;
+        @extend .btn-danger;
+    }
+
+    &__change-email-btn {
+        @extend .btn;
+        @extend .btn-primary;
+    }
+
+    &__change-password-btn {
+        @extend .btn;
+        @extend .btn-secondary;
+    }
+}
+
+.user-secret-profile {
+    @extend .user-profile;
+}
+
+.user-public-profile {
+    @extend .user-profile;
+}

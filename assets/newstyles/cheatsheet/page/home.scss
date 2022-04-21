@@ -1,0 +1,33 @@
+@use "@app/newstyles/common/component/page.scss" as page;
+@use "@app/newstyles/common/component/card.scss" as card;
+@use "~bootstrap/scss/bootstrap" as bs;
+
+.page-cheatsheet-home {
+    &__header {
+        @include page.page-header();
+    }
+
+    &__features {
+        @include card.lax-card-container();
+        display: flex;
+        flex-direction: column;
+
+
+        &__btn {
+            @extend .btn;
+            @extend .btn-primary;
+        }
+
+        &__dropdown {
+            margin-top: map-get(bs.$spacers, 3);
+        }
+
+        &__feature {
+
+        }
+    }
+
+    &__about {
+        text-align: center;
+    }
+}

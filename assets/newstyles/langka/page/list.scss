@@ -1,0 +1,59 @@
+@use "@app/newstyles/common/component/card.scss" as card;
+
+.page-langka-word-set-public-list {
+    @include card.heroes-container();
+
+    &__header {
+        @include lax-card-container();
+
+        text-align: center;
+    }
+
+    &__search {
+        @include card.small-lax-card-container();
+    }
+
+    &__entries {
+        @include card.card-container();
+        @include card.small-lax-card-container();
+        flex-direction: column; 
+        
+        > * {
+            @include card.card();
+        }
+    }
+    
+    &__footer {
+        @include lax-card-container();
+        text-align: center;
+    }
+}
+
+.page-langka-word-set-owned-list {
+    @include card.heroes-container();
+
+    &__header {
+        @include lax-card-container();
+
+        text-align: center;
+    }
+
+    &__search {
+        @include card.small-lax-card-container();
+    }
+
+    &__entries {
+        @include card.card-container();
+        @include card.small-lax-card-container();
+        flex-direction: column; 
+        
+        > * {
+            @include card.card();
+        }
+    }
+    
+    &__footer {
+        @include lax-card-container();
+        text-align: center;
+    }
+}

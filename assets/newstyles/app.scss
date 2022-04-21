@@ -1,0 +1,19 @@
+@import "./forms.scss";
+
+@import "./cheatsheet/style.scss";
+
+@import "./common/component/spinner.scss";
+@import "./common/component/error.scss";
+@import "./common/page/home.scss";
+
+@import "./langka/game.scss";
+@import "./langka/component/wordset.scss";
+@import "./langka/page/home.scss";
+@import "./langka/page/form.scss";
+@import "./langka/page/list.scss";
+
+@import "./user/page/register.scss";
+@import "./user/page/login.scss";
+@import "./user/page/profile.scss";
+@import "./user/page/confirm-registration.scss";
+@import "./user/page/change.scss";

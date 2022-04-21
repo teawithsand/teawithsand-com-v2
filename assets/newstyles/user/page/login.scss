@@ -1,0 +1,11 @@
+@use "@app/newstyles/common/component/page.scss" as page;
+
+.page-user-login {
+    &__header {
+        @include page.page-header();    
+    }
+    
+    &__form {
+        @include page.page-form();
+    }
+}
