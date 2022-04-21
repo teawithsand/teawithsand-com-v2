@@ -10,11 +10,11 @@ along with API request/response types, since paths are not exported for now.
 ## Runnning
 0. Install and run all prequisites, preferrably using vscode and `.devcontainer`
 1. Run `yarn`
-2. Enter `go` directory and run `go run . render`
+2. Enter `go` directory and run `go run . export`
 3. Run `yarn encore dev --watch` in parent dir
 4. Load configuration from `.env.dev` file in go dir. 
    Prefferrably using `export $(cat .env.dev | xargs)`
-5. Enter `go` directory and run `go run . serve`
+5. Enter `go` directory and run `go run . devserver`
 6. App should be up and running by now at address provided in `.env` file
 
 ## Notes: 
